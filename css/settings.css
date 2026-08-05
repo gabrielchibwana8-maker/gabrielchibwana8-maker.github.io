@@ -1,0 +1,19 @@
+hr{
+    margin:30px 0;
+    border:none;
+    border-top:1px solid #444;
+}
+
+.about-section{
+    text-align:center;
+}
+
+.about-section h2{
+    margin-bottom:15px;
+}
+
+.about-section p{
+    margin:10px 0;
+    line-height:1.6;
+    color:#ccc;
+}

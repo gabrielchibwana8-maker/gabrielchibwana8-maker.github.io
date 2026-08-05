@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#121212;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    text-align:center;
+    margin-top:80px;
+}
+
+.board{
+
+    width:330px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,100px);
+
+    gap:10px;
+
+    margin:30px auto;
+
+}
+
+.cell{
+
+    width:100px;
+
+    height:100px;
+
+    background:#1f1f1f;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+    border-radius:10px;
+
+    transition:.2s;
+
+}
+
+.cell:hover{
+
+    background:#333;
+
+}
+
+button{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#00b894;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.scoreboard{
+    margin:20px 0;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.scoreboard p{
+    background:#1f1f1f;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+.winner {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    animation: winnerPulse 0.8s infinite alternate;
+}
+
+@keyframes winnerPulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+.mode-selector {
+    margin-bottom: 20px;
+}
+
+.mode-selector button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.difficulty-selector button.active {
+    transform: scale(1.05);
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+@media (max-width: 600px) {
+
+    .game-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .cell {
+        font-size: 2.5rem;
+    }
+
+    .mode-selector,
+    .difficulty-selector {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mode-selector button,
+    .difficulty-selector button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .scoreboard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    #restartBtn,
+    #resetScoresBtn {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+.game-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 30px;
+
+    background:#1f1f1f;
+
+    z-index:1000;
+}
+
+.game-nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.game-nav a:hover{
+    color:#00b894;
+}

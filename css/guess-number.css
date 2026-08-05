@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#121212;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#1f1f1f;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    width:320px;
+    margin-top:80px;
+}
+
+h1{
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:20px 0;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    text-align:center;
+}
+
+button{
+
+    padding:10px 20px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+    background:#00b894;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+#message{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.difficulty{
+    margin:20px 0;
+}
+
+.difficulty button{
+    margin:5px;
+}
+
+.popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#ffffff;
+    color:#222;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,.4);
+    z-index:1000;
+}
+
+.hidden{
+    display:none;
+}
+
+.popup button{
+    margin-top:15px;
+}
+
+@keyframes pop{
+
+    0%{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.animate{
+
+    animation:pop .3s ease;
+
+}
+
+.game-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 30px;
+
+    background:#1f1f1f;
+
+    z-index:1000;
+}
+
+.game-nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.game-nav a:hover{
+    color:#00b894;
+}

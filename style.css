@@ -1,0 +1,388 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#121212;
+    color:white;
+}
+
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 7%;
+}
+
+nav h2{
+    font-size:24px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+
+/* Hero */
+
+.hero{
+    min-height:500px;
+
+    background:linear-gradient(
+        135deg,
+        #121212,
+        #1f1f1f
+    );
+}
+
+.hero-content{
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+.hero-content h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    color:#bbb;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+
+/* Buttons */
+
+button{
+    padding:12px 22px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#00b894;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:#00a383;
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+.explore-button{
+    display:inline-block;
+    padding:12px 22px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#00b894;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+/* Games */
+
+.games-section{
+    padding:70px 7%;
+
+    text-align:center;
+}
+
+.games-section h2{
+    font-size:36px;
+}
+
+.section-description{
+    color:#aaa;
+    margin-top:10px;
+    margin-bottom:40px;
+}
+
+
+.games{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+
+.card{
+    background:#1f1f1f;
+
+    padding:30px 20px;
+
+    border-radius:15px;
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.game-icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#aaa;
+
+    line-height:1.6;
+
+    margin-bottom:20px;
+}
+
+
+/* Footer */
+
+footer{
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #333;
+
+    color:#888;
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .hero-content h1{
+        font-size:36px;
+    }
+
+    nav{
+        padding:20px;
+    }
+
+    .games-section{
+        padding:50px 20px;
+    }
+
+    .container{
+    margin:30px 15px;
+    padding:20px;
+}
+
+.setting{
+    flex-direction:column;
+    gap:10px;
+}
+
+.setting label{
+    justify-content:space-between;
+}
+
+}
+
+.search-box{
+    margin:30px auto;
+    max-width:500px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 20px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#1f1f1f;
+    color:white;
+
+    font-size:16px;
+    outline:none;
+}
+
+.search-box input::placeholder{
+    color:#888;
+}
+
+.search-box input:focus{
+    box-shadow:0 0 0 2px #00b894;
+}
+
+.favorite-btn{
+    background:#333;
+    margin-top:10px;
+}
+
+.favorite-btn:hover{
+    background:#444;
+}
+
+.favorite-btn.active{
+    background:#e67e22;
+}
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.filter-buttons button{
+    background:#333;
+}
+
+.filter-buttons button.active{
+    background:#00b894;
+}
+
+body.light{
+
+    background:#f5f5f5;
+
+    color:#222;
+
+}
+
+body.light .hero{
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #eeeeee
+    );
+
+}
+
+body.light nav{
+
+    background:white;
+
+}
+
+body.light .card{
+
+    background:white;
+
+    color:#222;
+
+}
+
+body.light .card p{
+
+    color:#555;
+
+}
+
+body.light footer{
+
+    border-top:1px solid #ccc;
+
+    color:#555;
+
+}
+
+/* ==========================
+   Settings Page
+========================== */
+
+.container{
+    max-width:600px;
+    margin:60px auto;
+    padding:30px;
+    background:#1f1f1f;
+    border-radius:15px;
+    text-align:center;
+}
+
+.container h1{
+    margin-bottom:30px;
+}
+
+.setting{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2a2a2a;
+    padding:15px 20px;
+    margin:15px 0;
+    border-radius:10px;
+}
+
+.setting label{
+    font-size:18px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.setting input{
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+
+#resetDataBtn{
+    background:#e74c3c;
+    margin-top:20px;
+}
+
+#resetDataBtn:hover{
+    background:#c0392b;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00b894;
+}

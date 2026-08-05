@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | Mini Game Hub</title>
+
+    <link rel="stylesheet" href="../css/tic-tac-toe.css">
+</head>
+<body>
+
+    <nav class="game-nav">
+    <a href="../index.html">🎮 Mini Game Hub</a>
+    <a href="/games/achievements.html">🏆 Achievements</a>
+    <a href="../index.html">🏠 Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>❌ Tic Tac Toe ⭕
+
+        <div class="mode-selector">
+    <button id="twoPlayerBtn">👥 Two Players</button>
+    <button id="computerBtn">🤖 Vs Computer</button>
+</div>
+
+<div class="difficulty-selector">
+    <button id="easyBtn">Easy</button>
+    <button id="mediumBtn">Medium</button>
+    <button id="hardBtn">Hard</button>
+</div>
+
+    </h1>
+
+    <h2 id="status">Player X's Turn</h2>
+
+    <div class="scoreboard">
+    <p>❌ X Wins: <span id="xScore">0</span></p>
+    <p>⭕ O Wins: <span id="oScore">0</span></p>
+    <p>🤝 Draws: <span id="drawScore">0</span></p>
+    <p>  Games: <span id="gamesPlayed">0</span></p>
+    <button id="resetScoresBtn">Reset Scores</button>
+</div>
+
+    <div class="board">
+
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+
+    </div>
+
+    <button id="restartBtn">🔄 Restart</button>
+
+    <br><br>
+
+    <a href="../index.html">
+        <button>⬅ Back Home</button>
+    </a>
+
+</div>
+
+<script src="../js/tic-tac-toe.js"></script>
+
+</body>
+</html>

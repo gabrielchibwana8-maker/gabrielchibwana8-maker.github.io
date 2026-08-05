@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guess the Number | Mini Game Hub</title>
+
+    <meta name="description"
+          content="Play free browser games including Tic Tac Toe, Rock Paper Scissors, and Guess the Number. Mini Game Hub is fast, fun, and free.">
+
+    <meta name="keywords"
+          content="mini games, browser games, tic tac toe, rock paper scissors, guess the number, HTML games, JavaScript games">
+
+    <meta name="author"
+          content="Gabriel Chibwana">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <nav class="game-nav">
+    <a href="../index.html">🎮 Mini Game Hub</a>
+    <a href="/games/achievements.html">🏆 Achievements</a>
+    <a href="../index.html">🏠 Home</a>
+</nav>
+
+<div class="container">
+
+    <h1>🎯 Guess the Number</h1>
+
+    <div class="difficulty">
+
+    <button id="easyBtn">🟢 Easy</button>
+
+    <button id="mediumBtn">🟡 Medium</button>
+
+    <button id="hardBtn">🔴 Hard</button>
+
+</div>
+
+    <p id="rangeText">I'm thinking of a number between <b>1</b> and <b>100</b>.</p>
+
+    <input type="number" id="guessInput" placeholder="Enter your guess">
+
+    <button id="guessBtn">Guess</button>
+
+    <p id="message"></p>
+
+    <p id="attempts">Attempts: 0</p>
+
+    <p id="lives">❤️ Lives: 10</p>
+    
+    <p id="bestScore">🏆 Best Score: --</p>
+
+    <button id="restartBtn">New Game</button>
+
+    <br><br>
+
+    <a href="../index.html">
+        <button>⬅ Back Home</button>
+    </a>
+
+</div>
+
+<div id="winPopup" class="popup hidden">
+    <h2>🎉 Congratulations!</h2>
+    <p>You guessed the number!</p>
+    <button onclick="closePopup()">Play Again</button>
+</div>
+
+<script src="../js/guess-number.js"></script>
+
+</body>
+</html>

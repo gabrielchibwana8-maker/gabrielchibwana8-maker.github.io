@@ -374,7 +374,10 @@ body.light footer{
     display:flex;
     gap:20px;
     align-items:center;
+    flex-wrap:wrap;
+    justify-content:flex-end;
 }
+
 
 .nav-links a{
     text-decoration:none;
